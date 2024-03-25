@@ -1,0 +1,41 @@
+app_name: TelemetryXplorer
+version: alpha
+
+debug: true
+logging:
+  level: "DEBUG"
+  path: "/var/log/telemetryxplorer.log"
+
+services:
+  - name: "frontend"
+    url: "https://frontend.com/api/v1"
+
+  - name: "loki-install"
+    url: "https://loki-install.com/api/v1"
+    installing: true
+
+  - name: "loki-integration"
+    url: "https://loki-integration.com/api/v1"
+    integration: false
+
+  - name: "memcached"
+    url: "https://memcached.com/api/v1"
+
+  - name: "prometheus-install"
+    url: "https://prometheus-install.com/api/v1"
+    installing: true
+
+  - name: "prometheus-integration"
+    url: "https://prometheus-integration.com/api/v1"
+    integration: false
+
+  - name: "static"
+    path: "/lib/telemetryxplorer"
+
+  - name: "vault-integration"
+    url: "https://vault-integration.com/api/v1"
+    integration: true
+
+  - name: "web-server"
+    ssl: false
+    app: "nginx"
