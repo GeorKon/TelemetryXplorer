@@ -13,6 +13,7 @@ services:
   - name: "loki-install"
     url: "https://loki-install.com/api/v1"
     installing: true
+    address_installation: "127.0.0.1"
 
   - name: "loki-integration"
     url: "https://loki-integration.com/api/v1"
@@ -24,6 +25,7 @@ services:
   - name: "prometheus-install"
     url: "https://prometheus-install.com/api/v1"
     installing: true
+    address_installation: "127.0.0.1"
 
   - name: "prometheus-integration"
     url: "https://prometheus-integration.com/api/v1"
